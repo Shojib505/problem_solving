@@ -9,11 +9,11 @@ void main(List<String> args) {
 
   if (a > b && a > c && a > d && a > e) {
     print('a is bigger');
-  } else if (b > a && b > c && b > d && b > e) {
+  } else if (b > c && b > d && b > e) {
     print('b is bigger');
-  } else if (c > a && c > b && c > d && b > e) {
+  } else if (c > d && b > e) {
     print('c is bigger');
-  } else if (d > a && d > b && d > c && d > e) {
+  } else if (d > e) {
     print('d is bigger');
   } else {
     print('e is bigger');
