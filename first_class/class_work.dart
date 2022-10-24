@@ -19,19 +19,34 @@ void main(List<String> args) {
     print('e is bigger');
   } */
 
-  ///Better Approch
+/*   ///Better Approch
   List<int> numb = [15, 80, 10, -5, 50, 65, 90];
   numb.sort();
-  //TODO: do it menual later
+  //TODO: do it menual later without doing sorting
 
-  //// for (int i = 0; i < numb.length; i++) {
-  ////   int  temp = i;
-  ////   if (numb[temp] < numb[i + 1]) {
-  //     // int temp2 = numb[i+1];
-  ////   } else {
-  // //    print('not bigger lo');
-  //  // }
-  // //}
+  /* for (int i = 0; i < numb.length; i++) {
+     int  temp = i;
+     if (numb[temp] < numb[i + 1]) {
+      int temp2 = numb[i+1];
+      } else {
+        print('not bigger lo');
+    }
+  } */
 
   print('temp is bigger ${numb[numb.length - 1]}');
+
+ */
+
+  ///problem pattern recognition
+  ///TALI JURA FIX
+  List<String> people = ['a', 'b', 'c', 'd', 'e', 'f'];
+  int temi = 0;
+  for (int i = people.length - 1; i >= 0; i--) {
+    int temp = i;
+    print(' number :  $temp');
+    if (temp >= 0) {
+      temi = temi + temp;
+    }
+  }
+  print(' handschacke : = $temi');
 }
