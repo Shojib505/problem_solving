@@ -39,14 +39,41 @@ void main(List<String> args) {
 
   ///problem pattern recognition
   ///TALI JURA FIX
-  List<String> people = ['a', 'b', 'c', 'd', 'e', 'f'];
-  int temi = 0;
-  for (int i = people.length - 1; i >= 0; i--) {
-    int temp = i;
-    print(' number :  $temp');
-    if (temp >= 0) {
-      temi = temi + temp;
-    }
+  // List<String> people = ['a', 'b', 'c', 'd', 'e', 'f'];
+  // int temi = 0;
+  // for (int i = people.length - 1; i >= 0; i--) {
+  //   int temp = i;
+  //   print(' number :  $temp');
+  //   if (temp >= 0) {
+  //     temi = temi + temp;
+  //   }
+  // }
+  // print(' handschacke : = $temi');
+
+  findDecimimilNubmer(10);
+}
+
+void findDecimalToBinary(double n) {
+  ///recustion {problem* it's print one valu in one line}
+  if (n.toInt() > 0) {
+    findDecimalToBinary(n / 2);
+    print('${n.toInt() % 2}');
   }
-  print(' handschacke : = $temi');
+
+  ///using two while loop
+  // int temp = n.toInt();
+  // int count = 0;
+  // String result = '';
+  // List<String> arr = [];
+
+  // while (temp > 0) {
+  //   arr.add('${temp % 2}');
+  //   double i = temp / 2;
+  //   temp = i.toInt();
+  //   count++;
+  // }
+  // for (int i = count - 1; i >= 0; i--) {
+  //   result = '$result${arr[i]}';
+  // }
+  // print('$result');
 }
