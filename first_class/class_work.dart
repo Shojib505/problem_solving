@@ -50,7 +50,8 @@ void main(List<String> args) {
   // }
   // print(' handschacke : = $temi');
 
-  findDecimimilNubmer(10);
+  // findDecimalToBinary(10);
+  xTothePowerN(2, 4);
 }
 
 void findDecimalToBinary(double n) {
@@ -76,4 +77,12 @@ void findDecimalToBinary(double n) {
   //   result = '$result${arr[i]}';
   // }
   // print('$result');
+}
+
+void xTothePowerN(int x, n) {
+  int ress = x;
+  for (int i = n; i > 1; i--) {
+    ress = ress * x;
+  }
+  print(ress);
 }
