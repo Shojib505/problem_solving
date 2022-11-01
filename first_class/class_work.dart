@@ -51,7 +51,11 @@ void main(List<String> args) {
   print(' handschacke : = $temi'); */
 
   // findDecimalToBinary(10);
-  xTothePowerN(81, 4);
+  // xTothePowerN(81, 4);
+  reverseString('the sky is blue i love programming');
+  // sky is blue
+  // reverseWordsInString('the sky is blue');
+  // reverseWords('the sky is blue');
 }
 
 void findDecimalToBinary(double n) {
@@ -85,4 +89,90 @@ void xTothePowerN(int x, n) {
     ress = ress * x;
   }
   print(ress);
+}
+
+void reverseString(String st) {
+  int len = st.length - 1;
+  var stl = st.split('');
+  String ans = '';
+// 'the sky is blue'
+// 'eht yks si eulb'
+  int i = 0;
+  int j = 0;
+  while (i < len) {
+    while (j <= len && stl[j] != ' ') j++;
+    var temp;
+    j = j - 1;
+    while (i <= j) {
+      temp = stl[i];
+      stl[i] = stl[j];
+      stl[j] = temp;
+      i++;
+      j--;
+    }
+    i = i + 1 + 1;
+    j = i;
+  }
+  ans = stl.toString();
+  print(ans.toString());
+}
+
+void reverseWordsInString(String st) {
+  int i = st.length - 1;
+  String ans = '';
+  while (i >= 0) {
+    while (i >= 0 && st[i] == ' ') i--;
+    int j = i;
+    while (i >= 0 && st[i] != ' ') i--;
+    if (ans.isEmpty) {
+      ans = ans + st.substring(i + 1, j + 1);
+    } else {
+      ans = (ans + ' ${st.substring(i + 1, j + 1)}');
+    }
+  }
+  print(ans);
+}
+
+// Reverse the letters
+// of the word
+void reverse(str, start, end) {
+  // Temporary variable
+  // to store character
+  var temp;
+
+  while (start <= end) {
+    // Swapping the first
+    // and last character
+    temp = str[start];
+    str[start] = str[end];
+    str[end] = temp;
+    start++;
+    end--;
+  }
+}
+
+// Function to reverse words
+String reverseWords(st) {
+  // Reversing individual words as
+  // explained in the first step
+  st = st.split("");
+  int start = 0;
+  for (int end = 0; end < st.length; end++) {
+    // If we see a space, we
+    // reverse the previous
+    // word (word between
+    // the indexes start and end-1
+    // i.e., s[start..end-1]
+    if (st[end] == ' ') {
+      reverse(st, start, end);
+      start = end + 1;
+    }
+  }
+  // Reverse the last word
+  reverse(st, start, st.length - 1);
+  // Reverse the entire String
+  reverse(st, 0, st.length - 1);
+
+  print(st.join(""));
+  return st.join("");
 }
